@@ -38,3 +38,31 @@ void display(struct planner* p, int n) {
         printf("%-12s %-8d %-12s\n", p[i].day, p[i].date, p[i].activity);
     }
 }
+
+
+int main() {
+    int n;
+    struct planner* week;
+
+    printf("Enter the number of days (max 7): ");
+    scanf("%d", &n);
+
+    if (n < 1 || n > 7) {
+        printf("Invalid number of days. Please enter a number between 1 and 7.\n");
+        return 1;
+    }
+
+    week = create(n);
+    read(week, n);
+    display(week, n);
+
+    free(week);
+    return 0;
+}
+
+
+
+
+
+
+
