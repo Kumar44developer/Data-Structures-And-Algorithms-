@@ -48,6 +48,11 @@ void pat_match() {
     }
 }
 
+int main() {
+    read();
+    pat_match();
+    return 0;
+}
 
 
 
