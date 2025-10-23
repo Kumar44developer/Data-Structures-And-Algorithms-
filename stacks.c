@@ -49,5 +49,19 @@ void infixToPostfix(char *exp) {
         }
     }
 
-  
+    while (top != -1)
+        result[k++] = pop();
+
+    result[k] = '\0';
+    printf("Postfix Expression: %s\n", result);
+}
+
+int main() {
+    char exp[MAX];
+    printf("Enter Infix Expression: ");
+    scanf("%s", exp);
+    infixToPostfix(exp);
+    return 0;
+}
+
 
