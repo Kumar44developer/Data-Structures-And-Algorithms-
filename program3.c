@@ -14,6 +14,17 @@ int isValidPostfix(char *exp) {
     }
     return count == 1;
 }
+int main() {
+    char exp[100];
+    printf("Enter Postfix Expression: ");
+    scanf("%s", exp);
 
+    if (isValidPostfix(exp))
+        printf("Valid Postfix Expression\n");
+    else
+        printf("Invalid Postfix Expression\n");
+
+    return 0;
+}
 
 
